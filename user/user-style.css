@@ -1,0 +1,78 @@
+div.image{
+    float: left;
+    background-position: center 30%;
+    background-size: cover;
+    background-image: url(../images/left-image-background.jpg);
+    margin: 0;
+    width: 65%;
+    height: 700px;
+}
+div.container{
+    margin: 0 auto;
+    position: relative;
+    top: 45%;
+}
+p.image-title{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: 30px;
+    color: white;
+}
+div.image-layer{
+    background: rgba(13,60,85,0.6);
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+}
+div.form{
+    text-align: left;
+}
+p{
+    margin-bottom: 3px;
+}
+.text{
+    background: #fbfbfb;
+    font-size: 18px;
+    width: 100%;
+    padding: 3px;
+}
+div.submit{
+    text-align: left;
+    margin-top: 25px;
+}
+.buttom{
+    background: #0085ba;
+    border-color: #0073aa #006799 #006799;
+    -webkit-box-shadow: 0 1px 0 #006799;
+    box-shadow: 0 1px 0 #006799;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+    height: 30px;
+    width: 60px;
+    float: right;
+}
+.buttom:hover{
+    background: #008ec2;
+}
+div.panel{
+    float: right;
+    border-radius: 10px;
+    border: 1px solid #2a5d84;
+    border-right: 4px solid #2a5d84;
+    border-bottom: 4px solid #2a5d84;
+    background: white;
+    width: 33%;
+    padding: 20px 50px 20px 50px;
+    margin-top: 50px;
+}
+.main{
+    background: #f1f1f1;
+    padding: 50px;
+}
+.main a{
+    color: #f16c20;
+    text-decoration: underline;
+}

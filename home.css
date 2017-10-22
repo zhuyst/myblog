@@ -1,0 +1,66 @@
+.rows{
+    direction: ltr;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 1200px;
+}
+.row{
+    float: left;
+    margin-left: 50px;
+    margin-right: 20px;
+    width: 320px;
+    text-align: left;
+}
+div.top-image{
+    background-position: center 30%;
+    background-size: cover;
+    margin: 0;
+    height: 250px;
+}
+div.container{
+    padding: 100px;
+}
+p.image-title{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: 30px;
+    color: white;
+}
+div.image-layer{
+    background: rgba(13,60,85,0.6);
+    height: 250px;
+}
+.more{
+    text-align: right;
+}
+h2{
+    font-size: 19.2px;
+    font-weight: bold;
+    float: left;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.title-en{
+    color: #888888;
+    font-size: 12px;
+    text-align: right;
+    float: right;
+    margin: 0 auto;
+    padding-left: 200px;
+}
+.title-nd{
+    height: 50px;
+    margin-bottom: 10px;
+}
+div.article{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 130px;
+}
+p{
+    margin: 8px;
+}

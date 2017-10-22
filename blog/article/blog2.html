@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link href="../blog-style.css" rel="stylesheet" type="text/css">
+    <title>【从零开始的建站②】配置Apache+MariaDB+PHP</title>
+    <script src="../../js/jquery-3.2.1.min.js" rel="script" type="text/javascript"></script>
+    <script src="../../js/navigation.js" rel="script" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#catalog").smartFloat();
+        });
+    </script>
+</head>
+<body>
+    <iframe src="../../header.html" scrolling="no" frameborder="0" width="100%" height="80px" marginwidth="0" marginheight="0"></iframe>
+    <div class="main">
+        <div class="blogs" style="text-align: left">
+            <div class="title">
+                <p class="pos">
+                    位置：<a href="../../index.html" class="jump">Home</a>-->
+                    <a href="../index.html" class="jump">Blog</a>-->
+                    <a href="../classify/classify1.html" class="jump">从零开始的建站</a>
+                </p>
+                <a name="1st"></a>
+                <h2>【从零开始的建站②】配置Apache+MariaDB+PHP</h2>
+                <p class="colored-line" style="background: #f16c20;width: 400px;margin: 0;margin-left: 8px"></p>
+            </div>
+            <div class="article">
+                <p>购买完服务器，就要开始建站了，安装Wordpress前</p>
+                <p>我们需要先配置AMP环境</p>
+                <p><span class="red">AMP——Apache+MariaDB+PHP</span></p>
+                <p>&nbsp;</p>
+                <hr>
+                <h4>目录</h4>
+                <h5><a class="jump" href="#2nd">①配置Apache</a></h5>
+                <h5><a class="jump" href="#3rd">②配置MariaDB</a></h5>
+                <h5><a class="jump" href="#4th">③配置PHP</a></h5>
+                <hr>
+                <a name="2nd"></a>
+                <h5>①配置Apache</h5>
+                <h6>Apache —— http服务器</h6>
+                <p>&nbsp;</p>
+                <p>首先，启动Xshell并连接到服务器控制台</p>
+                <img src="../images/blog2/1.png">
+                <p>输入<span class="red">yum install httpd httpd-devel</span></p>
+                <p>安装Apache 与其扩展包</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog2/2.png">
+                <p>此时后台便会列出将要安装的软件及其依赖包，输入y安装</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog2/3.png">
+                <p>如果看到这个，就说明安装成功了。</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog2/4.png">
+                <p>输入<span class="red">systemctl start httpd</span></p>
+                <p>启动Apache服务</p>
+                <p>&nbsp;</p>
+                <p>此时在浏览器输入我们的公网IP</p>
+                <p>便可以看到Apache的Test网站了</p>
+                <img src="../images/blog2/5.png">
+                <p>&nbsp;</p>
+                <p>最后，输入<span class="red">systemctl enable httpd</span></p>
+                <p>将Apache服务设置为开机启动</p>
+                <img src="../images/blog2/6.png">
+                <p>&nbsp;</p>
+                <p>至此，Apache配置成功</p>
+                <hr>
+                <a name="3rd"></a>
+                <h5>②配置MariaDB</h5>
+                <h6>MariaDB —— 数据库服务器</h6>
+                <p>&nbsp;</p>
+                <p>输入<span class="red">yum install mariadb mariadb-server</span></p>
+                <p>进行安装</p>
+                <img src="../images/blog2/7.png">
+                <p>安装流程和上面没什么区别</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog2/8.png">
+                <p>安装完成后，分别输入</p>
+                <p><span class="red">systemctl start mariadb</span> —— 启动服务</p>
+                <p><span class="red">systemctl enable mariadb</span> —— 开机自启</p>
+                <p>&nbsp;</p>
+                <p>输入<span class="red">mysql -u root -p</span></p>
+                <p>password在刚安装时是没有的 直接回车</p>
+                <img src="../images/blog2/9.png">
+                <p>如果看到这个，便说明安装成功了</p>
+                <p>&nbsp;</p>
+                <p>PS:对于为什么是使用mysql命令感兴趣的同学</p>
+                <p>可以去百度下MySQL和MariaDB的关系</p>
+                <p>&nbsp;</p>
+                <p>然后输入</p>
+                <p><span class="red">update mysql.user set password=password(‘新密码’) where User=”root” and Host=”localhost”;</span></p>
+                <p>（注意最后有一个<span class="red">；</span>）</p>
+                <p>设置数据库root账号的密码</p>
+                <img src="../images/blog2/10.png">
+                <p>然后输入 <span class="red">flush privileges;</span>
+                <p>使更改立即生效</p>
+                <p>最后输入<span class="red">exit;</span>  退出数据库</p>
+                <p>&nbsp;</p>
+                <p>重新使用<span class="red">mysql -u root -p</span></p>
+                <p>password填上你输入的密码，如果登陆成功，那么密码便更改成功了。</p>
+                <p>&nbsp;</p>
+                <p>至此，MariaDB配置完成</p>
+                <hr>
+                <a name="4th"></a>
+                <h5>③配置PHP</h5>
+                <h6>PHP —— 一门后台服务器语言</h6>
+                <p>&nbsp;</p>
+                <p>输入<span class="red">yum install php php-devel</span></p>
+                <p>进行安装</p>
+                <img src="../images/blog2/11.png">
+                <p>安装成功后，输入<span class="red">systemctl restart httpd</span>
+                <p>重启Apache服务</p>
+                <p>&nbsp;</p>
+                <p>使用<span class="red">cd /var/www/html</span></p>
+                <p>移动到Apache默认网页目录</p>
+                <img src="../images/blog2/12.png">
+                <p>然后使用<span class="red">vi index.php</span></p>
+                <p>创建一个php文件</p>
+                <p>&nbsp;</p>
+                <p>vim说明：</p>
+                <p>i —— insert 进入编辑模式</p>
+                <p>esc —— 返回预览模式</p>
+                <p>:wq —— 保存并退出</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog2/13.png">
+                <p>进入编辑模式后输入<span class="red"><?php phpinfo(); ?></span></p>
+                <p>然后esc :wq 保存这个php文件</p>
+                <p>&nbsp;</p>
+                <p>然后打开浏览器，输入<span class="red">http://你的公网IP/index.php</span></p>
+                <img src="../images/blog2/14.png">
+                <p>看到这个就说明PHP配置成功了</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog2/15.png">
+                <p>输入<span class="red">yum install php-mysql</span></p>
+                <p>安装PHP的MySQL扩展组件</p>
+                <p>&nbsp;</p>
+                <p>至此，PHP配置完成</p>
+                <hr>
+                <div class="classify">
+                    <p><a href="blog3.html" class="jump">【从零开始的建站①】购买一台阿里云的学生机</a></p>
+                    <p><a href="blog2.html" class="jump">【从零开始的建站②】配置Apache+MariaDB+PHP</a></p>
+                    <p><a href="blog1.html" class="jump">【从零开始的建站③】搭建WordPress站点</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <iframe src="../navigation.html" scrolling="no" frameborder="0" width="100%" height="1000px"></iframe>
+            <div class="catalog" id="catalog">
+                <h4>目录</h4>
+                <p class="colored-line" style="background: #f16c20;width:35px;margin: 0;margin-left: 8px"></p>
+                <ol>
+                    <li><a href="#1st" class="link">前言</a></li>
+                    <li><a href="#2nd" class="link">配置Apache</a></li>
+                    <li><a href="#3rd" class="link">配置MariaDB</a></li>
+                    <li><a href="#4th" class="link">配置PHP</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="comment-send">
+                <div class="user">
+                    <p style="margin:0">用户名</p>
+                </div>
+                <div style="position: relative;z-index: 2">
+                    <textarea class="textarea" name="comment" rows="5" cols=105" required placeholder="请在此输入评论"></textarea>
+                    <button class="submit">提交<br/>评论</button>
+                </div>
+            </div>
+            <div class="comment-list">
+                <div class="list-item">
+                    <p class="item-name">访客1</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text">评论内容</p>
+                </div>
+                <div class="list-item">
+                    <p class="item-name">访客2</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text">评论内容</p>
+                </div>
+                <div class="list-item">
+                    <p class="item-name">访客3</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text" style="border-bottom: 0;margin-bottom: 0">评论内容</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe src="../../footer.html" scrolling="no" frameborder="0" width="100%" height="75px" marginwidth="0" marginheight="0"></iframe>
+</body>
+</html>

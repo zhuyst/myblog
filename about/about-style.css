@@ -1,0 +1,49 @@
+div.container{
+    padding-top: 5%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+div.image-layer{
+    background: rgba(13,60,85,0.6);
+    height: 800px;
+}
+div.panel{
+    border-radius: 10px;
+    border: 2px solid #be5000;
+    border-right: 5px solid #be5000;
+    border-bottom: 5px solid #be5000;
+    background: #eeeeee;
+    padding: 20px 50px 20px 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: left;
+    padding-bottom: 30px;
+    width: 100%;
+    opacity:0.85;
+}
+.main{
+    background-position: center 50%;
+    background-size: cover;
+    background: url("../images/about-image-background.jpg");
+}
+.buttom{
+    background: #0085ba;
+    border-color: #0073aa #006799 #006799;
+    -webkit-box-shadow: 0 1px 0 #006799;
+    box-shadow: 0 1px 0 #006799;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+    height: 30px;
+    width: 60px;
+    float: right;
+}
+.buttom:hover{
+    background: #008ec2;
+}
+p{
+    margin-bottom: 3px;
+}
+h3{
+    text-align: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <link href="msg-style.css" rel="stylesheet" type="text/css">
+    <title>青云的小窝-留言板</title>
+    <style>
+        li{
+            list-style: none;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="../header.html" scrolling="no" frameborder="0" width="100%" height="80px" marginwidth="0" marginheight="0"></iframe>
+    <div class="main">
+        <div class="message">
+            <div class="message-list">
+                <div class="list-item">
+                    <p class="item-name">访客1</p>
+                    <p class="colored-line" style="background: #f16c20;width: 10%;margin: 0;"></p>
+                    <div class="reply-item">
+                        <p class="item-name">访客3</p>
+                        <p class="colored-line" style="background: #f16c20;width: 10%;margin: 0;"></p>
+                        <p class="item-text">评论内容</p>
+                    </div>
+                    <p class="item-text">
+                        <strong class="reply-text">回复访客3：</strong>
+                        评论内容
+                    </p>
+                    <a class="reply" href="">回复</a>
+                    <p class="colored-line" style="background: #eaeaea;width: 100%;margin-top: 10px"></p>
+                </div>
+                <div class="list-item">
+                    <p class="item-name">访客2</p>
+                    <p class="colored-line" style="background: #f16c20;width: 10%;margin: 0;"></p>
+                    <p class="item-text">评论内容</p>
+                    <a class="reply" href="">回复</a>
+                    <p class="colored-line" style="background: #eaeaea;width: 100%;margin-top: 10px"></p>
+                </div>
+                <div class="list-item" style="margin-bottom: 15px">
+                    <p class="item-name">访客3</p>
+                    <p class="colored-line" style="background: #f16c20;width: 10%;margin: 0;"></p>
+                    <p class="item-text" style="border-bottom: 0;margin-bottom: 0">评论内容</p>
+                    <a class="reply" href="">回复</a>
+                </div>
+            </div>
+            <div class="message-send">
+                <div class="msg-username">
+                    <p style="margin:0">青云桑</p>
+                </div>
+                <div style="position: relative;z-index: 2">
+                    <textarea class="textarea" name="message" rows="5" cols=105" required placeholder="请在此输入评论"></textarea>
+                    <button class="submit">提交<br/>评论</button>
+                </div>
+            </div>
+        </div>
+        <div class="user">
+            <h3 style="text-align: center">青云桑</h3>
+            <div class="information">
+                <ul style="padding: 0">
+                    <li>用户名：zhuyst</li>
+                    <li>E-mail：13553371651@139.com</li>
+                    <li>注册时间：2017-04-08</li>
+                    <li style="margin-bottom: 5px">个性签名：</li>
+                    <li style="margin-top: 0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎来到青云的小窝</li>
+                    <li><a href="">有3个回复</a></li>
+                    <li><a href="../user/change.html">更改我的个人信息</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <iframe src="../footer.html" scrolling="no" frameborder="0" width="100%" height="75px" marginwidth="0" marginheight="0"></iframe>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>青云的小窝-修改个人信息</title>
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <link href="../about/about-style.css" rel="stylesheet" type="text/css">
+    <style>
+        .text{
+            background: #fbfbfb;
+            font-size: 18px;
+            width: 100%;
+            padding: 3px;
+        }
+        textarea{
+            resize: none;
+            border-left: 2px solid #888888;
+            border-top: 2px solid #888888;
+            border-right: 2px solid #eaeaea;
+            border-bottom: 2px solid #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="../header.html" scrolling="no" frameborder="0" width="100%" height="80px" marginwidth="0" marginheight="0"></iframe>
+    <div class="main">
+        <div class="image-layer">
+            <div class="container">
+                <div class="panel" style="padding-bottom: 60px">
+                    <h3>修改个人信息</h3>
+                    <p>用户名：zhuyst</p>
+                    <p><label for="nickname">昵称：</label></p>
+                    <input class="text" style="width: 80%" type="text" name="nickname" id="nickname" placeholder="青云桑">
+                    <button class="buttom">修改</button>
+                    <p><label for="message">个性签名：</label></p>
+                    <textarea class="text" name="message" id="message" rows="3" placeholder="欢迎来到青云的小窝"></textarea>
+                    <button class="buttom" style="margin-top: 10px;margin-right: 30px">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe src="../footer.html" scrolling="no" frameborder="0" width="100%" height="75px" marginwidth="0" marginheight="0"></iframe>
+</body>
+</html>

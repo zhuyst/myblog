@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link href="../blog-style.css" rel="stylesheet" type="text/css">
+    <title>【从零开始的建站①】购买一台阿里云的学生机</title>
+    <script src="../../js/jquery-3.2.1.min.js" rel="script" type="text/javascript"></script>
+    <script src="../../js/navigation.js" rel="script" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#catalog").smartFloat();
+        });
+    </script>
+</head>
+<body>
+    <iframe src="../../header.html" scrolling="no" frameborder="0" width="100%" height="80px" marginwidth="0" marginheight="0"></iframe>
+    <div class="main">
+        <div class="blogs" style="text-align: left">
+            <div class="title">
+                <p class="pos">
+                    位置：<a href="../../index.html" class="jump">Home</a>-->
+                    <a href="../index.html" class="jump">Blog</a>-->
+                    <a href="../classify/classify1.html" class="jump">从零开始的建站</a>
+                </p>
+                <a name="1st"></a>
+                <h2>【从零开始的建站①】购买一台阿里云的学生机</h2>
+                <p class="colored-line" style="background: #f16c20;width: 400px;margin: 0;margin-left: 8px"></p>
+            </div>
+            <div class="article">
+                <img src="../images/blog3/1.png">
+                <p>最近，阿里云又重新启动了学生机的计划，从原来的云翼计划改成了校园扶持计划</p>
+                <p>并且从华北节点变为了华南节点，从之前的1核1G变为了1核2G</p>
+                <p>但是从按量付费100M带宽变为了固定带宽1M，也算是有好有坏吧</p>
+                <p>价格还是9.9软妹币，虽然还是比腾讯云的1块钱服务器+域名贵，但是这个，毕竟是不限量的嘛</p>
+                <p>网址：<a href="https://promotion.aliyun.com/ntms/campus2017.html" class="jump">https://promotion.aliyun.com/ntms/campus2017.html</a></p>
+                <p>&nbsp;</p>
+                <hr>
+                <h4>目录</h4>
+                <h5><a href="" class="jump">①购买一台阿里云学生机</a></h5>
+                <h5><a href="" class="jump">②连接服务器控制台</a></h5>
+                <hr>
+                <a name="2nd"></a>
+                <h5>①购买一台阿里云学生机</h5>
+                <p>&nbsp;</p>
+                <p>在完成了阿里云的身份认证和学生认证后便可以购买学生机
+                <p>学生认证是通过<strong><a href="http://www.chsi.com.cn/" class="jump">学信网</a></strong>来进行认证的</p>
+                <p>学生机在毕业后便将无法以9.9的超便宜价格续费这点要注意下</p>
+                <p>↓ 完成认证后就开始购买吧 ↓</p>
+                <img src="../images/blog3/2.png">
+                <p>&nbsp;</p>
+                <img src="../images/blog3/3.png">
+                <p>在这里，我们选择<span class="red">公共镜像</span>，然后购买</p>
+                <img src="../images/blog3/4.png">
+                <p>在网络这里，选择<span class="red">默认安全组2</span>
+                <p>由于我们主要是来做研究和实验的服务器，所以做太多的安全措施反而之后会很麻烦。</p>
+                <p>况且CentOS也提供iptables这个防火墙，所以没必要去设置限定端口。</p>
+                <img src="../images/blog3/5.png">
+                <p>在镜像这里选择<span class="red">CentOS 7.2 64位</span></p>
+                <img src="../images/blog3/6.png">
+                <p>在最下方安全<span class="red">设置你的超级管理员账号(root)的密码</span>
+                <p>实例名称就是服务器的名称，方便你辨别购买的多个服务器</p>
+                <p>&nbsp;</p>
+                <p>然后点击购买，并完成支付，你就拥有了一台阿里云的云服务器了！</p>
+                <img src="../images/blog3/7.png">
+                <p>&nbsp;</p>
+                <hr>
+                <a name="3rd"></a>
+                <h5>②连接服务器控制台</h5>
+                <p>&nbsp;</p>
+                <p>点击<span class="red">管理控制台</span>，进入阿里云的后台。</p>
+                <img src="../images/blog3/8.png">
+                <p>点击<span class="red">实例</span></p>
+                <p>&nbsp;</p>
+                <img src="../images/blog3/9.png">
+                <p>在这里，我们就能看到我们服务器的概况了</p>
+                <p>&nbsp;</p>
+                <p>然后特别注意下<span class="red">IP地址</span>这一列</p>
+                <img src="../images/blog3/10.png">
+                <p><span class="red">120.25.155.228(公)</span></p>
+                <p>记下这个公网的IP地址，这就是你服务器的地址。</p>
+                <p>&nbsp;</p>
+                <p>然后下载连接服务器控制台的工具<span class="red">Xshell</span></p>
+                <p>↓ 点击下载 ↓</p>
+                <p><strong><a href="https://blog.zhuyst.cc/wp-content/uploads/2017/03/Xshell_5.0.1044.zip" class="jump">Xshell_5.0.1044</a></strong></p>
+                <img src="../images/blog3/11.png">
+                <p>打开软件后就会弹出一个会话框，点击<span class="red">新建</span></p>
+                <p>&nbsp;</p>
+                <img src="../images/blog3/12.png">
+                <p>在右方填写服务器的信息</p>
+                <p><span class="red">主机号——上面在阿里云后台看到的IP号</span></p>
+                <p>为了分辨不同的服务器，通常将名称也设为IP地址</p>
+                <p>&nbsp;</p>
+                <p>点击确定后进行连接</p>
+                <img src="../images/blog3/13.png">
+                <p>接受并保存</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog3/14.png">
+                <p>由于我们是初次登陆，所以只能以root用户登陆</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog3/15.png">
+                <p>密码就是在创建实例时填写的密码</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog3/16.png">
+                <p>点击确定后，如果出现类似这个的提示</p>
+                <p>那么恭喜你成功连接上了服务器</p>
+                <hr>
+                <div class="classify">
+                    <p><a href="blog3.html" class="jump">【从零开始的建站①】购买一台阿里云的学生机</a></p>
+                    <p><a href="blog2.html" class="jump">【从零开始的建站②】配置Apache+MariaDB+PHP</a></p>
+                    <p><a href="blog1.html" class="jump">【从零开始的建站③】搭建WordPress站点</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <iframe src="../navigation.html" scrolling="no" frameborder="0" width="100%" height="1000px"></iframe>
+            <div class="catalog" id="catalog">
+                <h4>目录</h4>
+                <p class="colored-line" style="background: #f16c20;width:35px;margin: 0;margin-left: 8px"></p>
+                <ol>
+                    <li><a href="#1st" class="link">前言</a></li>
+                    <li><a href="#2nd" class="link">购买一台阿里云学生机</a></li>
+                    <li><a href="#3rd" class="link">连接服务器控制台</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="comment-send">
+                <div class="user">
+                    <p style="margin:0">用户名</p>
+                </div>
+                <div style="position: relative;z-index: 2">
+                    <textarea class="textarea" name="comment" rows="5" cols=105" required placeholder="请在此输入评论"></textarea>
+                    <button class="submit">提交<br/>评论</button>
+                </div>
+            </div>
+            <div class="comment-list">
+                <div class="list-item">
+                    <p class="item-name">访客1</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text">评论内容</p>
+                </div>
+                <div class="list-item">
+                    <p class="item-name">访客2</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text">评论内容</p>
+                </div>
+                <div class="list-item">
+                    <p class="item-name">访客3</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text" style="border-bottom: 0;margin-bottom: 0">评论内容</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe src="../../footer.html" scrolling="no" frameborder="0" width="100%" height="75px" marginwidth="0" marginheight="0"></iframe>
+</body>
+</html>

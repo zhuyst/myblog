@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link href="../blog-style.css" rel="stylesheet" type="text/css">
+    <title>【从零开始的建站③】搭建WordPress站点</title>
+    <script src="../../js/jquery-3.2.1.min.js" rel="script" type="text/javascript"></script>
+    <script src="../../js/navigation.js" rel="script" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#catalog").smartFloat();
+        });
+    </script>
+</head>
+<body>
+    <iframe src="../../header.html" scrolling="no" frameborder="0" width="100%" height="80px" marginwidth="0" marginheight="0"></iframe>
+    <div class="main">
+        <div class="blogs" style="text-align: left">
+            <div class="title">
+                <p class="pos">
+                    位置：<a href="../../index.html" class="jump">Home</a>-->
+                    <a href="../index.html" class="jump">Blog</a>-->
+                    <a href="../classify/classify1.html" class="jump">从零开始的建站</a>
+                </p>
+                <a name="1st"></a>
+                <h2>【从零开始的建站③】搭建WordPress站点</h2>
+                <p class="colored-line" style="background: #f16c20;width: 400px;margin: 0;margin-left: 8px"></p>
+            </div>
+            <div class="article">
+                <p>AMP环境搭建完成后，便可开始最后的工作——搭建WordPress站点了</p>
+                <p>&nbsp;</p>
+                <hr>
+                <h4>目录</h4>
+                <h5><a class="jump" href="#2nd">①下载与前期准备</a></h5>
+                <h5><a class="jump" href="#3rd">②配置与使用WordPress</a></h5>
+                <hr>
+                <a name="2nd"></a>
+                <h5>①下载与前期准备</h5>
+                <p>&nbsp;</p>
+                <p>使用Xshell连接到服务器控制台，使用<span class="red">cd</span>回到用户的home目录</p>
+                <p>然后输入</p>
+                <p><span class="red">wget https://cn.wordpress.org/wordpress-4.7.3-zh_CN.tar.gz</span></p>
+                <p>下载WordPress</p>
+                <img src="../images/blog1/1.png">
+                <p>&nbsp;</p>
+                <p>下载完成后，使用</p>
+                <p><span class="red">tar -xzf wordpress-4.7.3-zh_CN.tar.gz</span></p>
+                <p>解压文件</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog1/2.png">
+                <p><span class="red">cd /var/www/html</span> —— 移动到html主目录</p>
+                <p><span class="red">mkdir wordpress</span> —— 创建一个wordpress的子目录</p>
+                <p><span class="red">cd</span> —— 返回home目录</p>
+                <p><span class="red">cp -rf wordpress/* /var/www/html/wordpress</span> —— 将wordpress复制到子目录中</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog1/3.png">
+                <p><span class="red">cd /var/www/html</span> —— 进入wordpress的上级目录</p>
+                <p><span class="red">chmod -R 777 wordpress</span> —— 给予wordpress目录所有的权限</p>
+                <p>&nbsp;</p>
+                <p>输入<span class="red">mysql -u root -p</span></p>
+                <p>进入数据库</p>
+                <img src="../images/blog1/4.png">
+                <p>输入<span class="red">create database wordpress;</span></p>
+                <p><span class="red">flush privileges;</span></p>
+                <p>创建给WordPress的数据库</p>
+                <p>&nbsp;</p>
+                <hr>
+                <a name="3rd"></a>
+                <h5>②配置与使用WordPress</h5>
+                <p>&nbsp;</p>
+                <p>在浏览器输入<span class="red">http://你的公网IP/wordpress/</span></p>
+                <p>开始配置WordPress</p>
+                <img src="../images/blog1/5.png">
+                <img src="../images/blog1/6.png">
+                <p><span class="red">用户名</span> —— root</p>
+                <p><span class="red">密码</span> —— 在配置MariaDB时设置的密码</p>
+                <p>提交后就开始配置站点的基本信息了</p>
+                <img src="../images/blog1/7.png">
+                <p><span class="red">站点标题</span> —— 你的博客名</p>
+                <p><span class="red">用户名</span> —— 管理员账户的用户名</p>
+                <p>点击安装WordPress，安装完成</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog1/8.png">
+                <p>进入登陆界面，输入刚刚设置的账号密码登陆</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog1/9.png">
+                <p><span class="red">仪表盘</span> —— WordPress的后台</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog1/10.png">
+                <p>在左上角点击查看站点，便可以看到初始的WordPress界面了</p>
+                <p>&nbsp;</p>
+                <img src="../images/blog1/11.png">
+                <p>之后，使用<span class="red">http://你的公网IP/wordpress/</span></p>
+                <p>便可以访问属于你的博客了</p>
+                <p>&nbsp;</p>
+                <p>至此，WordPress安装完毕</p>
+                <hr>
+                <div class="classify">
+                    <p><a href="blog3.html" class="jump">【从零开始的建站①】购买一台阿里云的学生机</a></p>
+                    <p><a href="blog2.html" class="jump">【从零开始的建站②】配置Apache+MariaDB+PHP</a></p>
+                    <p><a href="blog1.html" class="jump">【从零开始的建站③】搭建WordPress站点</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <iframe src="../navigation.html" scrolling="no" frameborder="0" width="100%" height="1000px"></iframe>
+            <div class="catalog" id="catalog">
+                <h4>目录</h4>
+                <p class="colored-line" style="background: #f16c20;width:35px;margin: 0;margin-left: 8px"></p>
+                <ol>
+                    <li><a href="#1st" class="link">前言</a></li>
+                    <li><a href="#2nd" class="link">下载与前期准备</a></li>
+                    <li><a href="#3rd" class="link">配置与使用WordPress</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="comment-send">
+                <div class="user">
+                    <p style="margin:0">用户名</p>
+                </div>
+                <div style="position: relative;z-index: 2">
+                    <textarea class="textarea" name="comment" rows="5" cols=105" required placeholder="请在此输入评论"></textarea>
+                    <button class="submit">提交<br/>评论</button>
+                </div>
+            </div>
+            <div class="comment-list">
+                <div class="list-item">
+                    <p class="item-name">访客1</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text">评论内容</p>
+                </div>
+                <div class="list-item">
+                    <p class="item-name">访客2</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text">评论内容</p>
+                </div>
+                <div class="list-item">
+                    <p class="item-name">访客3</p>
+                    <p class="colored-line" style="background: #f16c20;width: 100px;margin: 0;"></p>
+                    <p class="item-text" style="border-bottom: 0;margin-bottom: 0">评论内容</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe src="../../footer.html" scrolling="no" frameborder="0" width="100%" height="75px" marginwidth="0" marginheight="0"></iframe>
+</body>
+</html>

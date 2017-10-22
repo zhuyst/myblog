@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>青云的小窝-忘记密码</title>
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <link href="user-style.css" rel="stylesheet" type="text/css">
+    <style>
+        a.again{
+            margin: 20px;
+            position: relative;
+            top: 3px;
+        }
+        div.panel{
+            float: none;
+            width:1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="../header.html" scrolling="no" frameborder="0" width="100%" height="80px" marginwidth="0" marginheight="0"></iframe>
+    <div class="main">
+        <h3 style="margin-right: 600px">忘记密码？</h3>
+        <div class="panel">
+            <p>请输入您注册时使用的邮箱，我们会发送一条带有验证码的邮件</p>
+            <p>
+                <label for="email" style="margin: 8px">邮箱：</label>
+                <input class="text" style="width: 92.2%;" type="text" name="email" id="email" placeholder="请输入注册邮箱">
+            </p>
+            <p style="text-align: right;margin-bottom: 36px">
+                <a class="again" href="">没收到？再发一次</a>
+                <button class="buttom" style="width: 80px;margin-right: 50px">发送邮件</button>
+            </p>
+            <p class="colored-line" style="background: #eaeaea;width: 100%;"></p>
+            <p style="margin-top: 36px">
+                <label for="verification">验证码：</label>
+                <input class="text" style="width: 92.2%" type="text" name="verification" id="verification" placeholder="请输入收到的验证码">
+            </p>
+            <p style="margin-bottom: 15px">
+                &nbsp;
+                <button class="buttom" onclick="window.location.href='newpassword.html';" style="margin-right: 55px">确定</button>
+            </p>
+        </div>
+    </div>
+    <iframe src="../footer.html" scrolling="no" frameborder="0" width="100%" height="75px" marginwidth="0" marginheight="0"></iframe>
+</body>
+</html>

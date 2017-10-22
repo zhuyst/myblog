@@ -1,0 +1,122 @@
+.main{
+    padding: 50px 100px;
+}
+div.message {
+    float: left;
+    width: 65%;
+    margin: 0;
+    text-align: left;
+}
+p.note{
+    margin:0;
+    float: left;
+    color: #888888;
+    margin-right: 330px;
+}
+.textarea{
+    resize: none;
+    border: 3px solid #2a5d84;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    float: left;
+    width: 85%;
+}
+.submit{
+    margin-left: 3%;
+    border-radius: 10px;
+    height: 116px;
+    width: 12%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    line-height: 25px;
+    background: #0085ba;
+    border-color: #0073aa #006799 #006799;
+    -webkit-box-shadow: 0 1px 0 #006799;
+    box-shadow: 0 1px 0 #006799;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+    float: right;
+}
+.submit:hover{
+    background: #008ec2;
+}
+p.item-name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #2a5d84;
+    margin: 8px;
+    margin-top: 0;
+}
+div.list-item{
+    margin-top:35px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+div.message-list{
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+    border-bottom: 4px solid #eaeaea;
+    border-right: 4px solid #eaeaea;
+    width: 100%;
+    margin-bottom: 30px;
+}
+p.item-text{
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+div.msg-username{
+    position: relative;
+    left: 50px;
+    top: 20px;
+    z-index: 3;
+    border-radius: 30px;
+    border: 3px solid #2a5d84;
+    padding: 5px;
+    width: 65px;
+    height: 40px;
+    background-color: white;
+}
+div.user{
+    float: right;
+    border: 1px solid #f16c20;
+    border-bottom: 3px solid #f16c20;
+    border-right: 3px solid #f16c20;
+    background: #2a5d84;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+}
+div.information{
+    text-align: left;
+    margin-left: 40px;
+}
+.information a{
+    text-decoration: underline;
+}
+.information a:hover{
+    color: #f16c20;
+}
+a.reply{
+    text-align: right;
+    text-decoration: underline;
+    color: #f16c20;
+    font-size: 12px;
+    margin-left: 95%;
+}
+div.reply-item{
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+    border-bottom: 4px solid #eaeaea;
+    border-right: 4px solid #eaeaea;
+    padding: 20px;
+}
+.reply-text{
+    color: #2a5d84;
+}
